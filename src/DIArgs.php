@@ -2,10 +2,10 @@
 
 namespace litepubl\core\options;
 
-use litepubl\core\container\DI\Args as DIArgs;
+use litepubl\core\container\DI\Args;
 use litepubl\core\storage\ItemsStorableTrait;
 
-class Args extends DIArgs
+class DIArgs extends Args
 {
     use ItemsStorableTrait;
 
