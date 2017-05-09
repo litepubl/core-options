@@ -9,7 +9,7 @@ class DICache extends Cache
 {
     use ItemsStorableTrait;
 
-    protected $baseName = 'cache/diargs';
+    protected $baseName = 'cache/dicache';
 
     public function set(string $className, array $args)
     {
