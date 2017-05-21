@@ -2,12 +2,12 @@
 
 namespace litepubl\core\options;
 
-use litepubl\core\container\EventsInterface as ContainerEventsInterface;
-use litepubl\core\container\EventsInterface as ContainerInterface;
+use litepubl\core\container\EventsInterface;
+use litepubl\core\container\ContainerInterface;
 use litepubl\core\storage\StorageAware;
-use litepubl\core\events\EventManagerInterface as ContainerEventsInterface;
+use litepubl\core\events\EventManagerInterface;
 
-class ContainerEvents implements ContainerEventsInterface, StorageAware
+class ContainerEvents implements EventsInterface, StorageAware
 {
     const RESULT = 'result';
     const INSTANCE = 'instance';
@@ -16,10 +16,14 @@ class ContainerEvents implements ContainerEventsInterface, StorageAware
     protected $container;
     protected $eventManager;
 
-    public function __construct(ContainerInterface $container, EventManagerInterface $eventManager)
+    public function __construct(EventManagerInterface $eventManager)
+    {
+        $this->eventManager = $eventManager;
+    }
+
+    public function setContainer(ContainerInterface $container)
     {
         $this->container = $container;
-        $this->eventManager = $eventManager;
     }
 
     public function setStorage(StorageInterface $storage)
