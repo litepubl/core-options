@@ -1,5 +1,5 @@
 {
-    "name": "litepubl/options",
+    "name": "litepubl/core-options",
     "type": "library",
     "version": "7.08.0",
     "description": "Fast powerfull CMS",
@@ -25,10 +25,13 @@
     },
     "require": {
         "php": ">=7.00.0",
+        "litepubl/core-container": ">=8.0.0",
+        "litepubl/core-logmanager": ">=8.0.0",
+        "litepubl/core-data": ">=8.0.0"
     },
     "autoload": {
         "psr-4": {
-            "litepubl\\core\\options\\": "src/"
+            "LitePubl\\Core\\Options\\": "src/"
         }
     }
 }

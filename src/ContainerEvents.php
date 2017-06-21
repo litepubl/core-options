@@ -4,7 +4,7 @@ namespace litepubl\core\options;
 
 use litepubl\core\container\EventsInterface;
 use litepubl\core\container\ContainerInterface;
-use litepubl\core\storage\StorageAware;
+use litepubl\core\storage\storables\AgregatableInterface;
 use litepubl\core\events\EventManagerInterface;
 
 class ContainerEvents implements EventsInterface, StorageAware
